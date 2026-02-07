@@ -221,6 +221,65 @@ button.full[aria-expanded="true"]::after{
   opacity: 0.45;
 }
 
+/* Monday requests strip (Task visual summary) */
+.requestStrip{
+  display:grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--s3);
+  margin: var(--s4) 0 var(--s4) 0;
+}
+
+.reqCard{
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  background: linear-gradient(180deg, var(--panel) 0%, #ffffff 100%);
+  padding: var(--s3);
+  box-shadow: var(--shadow-soft);
+  display:flex;
+  gap: var(--s3);
+  align-items:flex-start;
+  min-height: 86px;
+}
+
+.reqIcon{
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color: var(--accent);
+  flex: 0 0 auto;
+}
+
+.reqIcon svg{
+  width: 22px;
+  height: 22px;
+}
+
+.reqTitle{
+  font-weight: 900;
+  font-size: 13px;
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.reqSub{
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+/* Responsive: keep single-column page, but wrap request cards nicely */
+@media (max-width: 980px){
+  .requestStrip{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (max-width: 520px){
+  .requestStrip{ grid-template-columns: 1fr; }
+}
+
 /* Template box */
 .templateBox{
   margin-top: var(--s4);
