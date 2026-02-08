@@ -91,50 +91,73 @@ function countAny(text, needles) {
 }
 
 /* ---------------- Task content ---------------- */
-const QUESTION_TEXT =
-`TASK
+const QUESTION_TEXT = `
+<div class="taskText">
+  <h3>TASK</h3>
 
-It’s 9:05am on a Monday. You work in an office role supporting projects, communications, and admin tasks. When you open your inbox, you find five new requests that all claim urgency, from different people across the organisation:
+  <p><strong>It’s 9:05am on a Monday.</strong><br>
+  You work in an office role supporting projects, communications, and admin tasks. When you open your inbox, you find <strong>five new requests</strong> that all claim urgency, from different people across the organisation:</p>
 
-1) Line Manager (Operations)
-Needs a summary slide deck for a leadership meeting at 2pm today. The data already exists but must be condensed into clear key messages.
+  <ol>
+    <li>
+      <p><strong>Line Manager (Operations)</strong><br>
+      Needs a <strong>summary slide deck</strong> for a leadership meeting at <strong>2pm today</strong>.<br>
+      The data already exists but must be condensed into <strong>clear key messages</strong>.</p>
+    </li>
 
-2) Senior Colleague (Finance)
-Asks you to review a cost spreadsheet “as soon as possible” before it is sent to an external partner. Errors could be reputationally damaging.
+    <li>
+      <p><strong>Senior Colleague (Finance)</strong><br>
+      Asks you to review a <strong>cost spreadsheet “as soon as possible”</strong> before it is sent to an <strong>external partner</strong>.<br>
+      Errors could be <strong>reputationally damaging</strong>.</p>
+    </li>
 
-3) Project Lead (Delivery Team)
-Messages you on Teams asking for help rewriting an email to a client who is unhappy about a delay. The tone must be professional and calming.
+    <li>
+      <p><strong>Project Lead (Delivery Team)</strong><br>
+      Messages you on Teams asking for help rewriting an email to a <strong>client who is unhappy about a delay</strong>.<br>
+      The tone must be <strong>professional and calming</strong>.</p>
+    </li>
 
-4) New Starter You Mentor
-Emails asking for help using the internal system. They say they are blocked and can’t progress their work without guidance.
+    <li>
+      <p><strong>New Starter You Mentor</strong><br>
+      Emails asking for help using the <strong>internal system</strong>.<br>
+      They say they are <strong>blocked</strong> and can’t progress their work without guidance.</p>
+    </li>
 
-5) Your Own Deadline
-You must submit your weekly report by 5pm today, and you haven’t started it yet.
+    <li>
+      <p><strong>Your Own Deadline</strong><br>
+      You must submit your <strong>weekly report by 5pm today</strong>, and you haven’t started it yet.</p>
+    </li>
+  </ol>
 
-You can’t do everything at once. You decide to use AI as a prioritisation assistant (you remain responsible for the final decisions).
+  <p>You can’t do everything at once.<br>
+  You decide to use <strong>AI as a prioritisation assistant</strong> (you remain responsible for the final decisions).</p>
 
-YOUR TASK
+  <h3>YOUR TASK</h3>
 
-Write a FEthink prompt using the four-stage structure:
-Role → Task → Context → Format
+  <p>Write a <strong>FEthink prompt</strong> using the four-stage structure:</p>
+  <p><strong>Role → Task → Context → Format</strong></p>
 
-Your prompt must instruct an AI assistant to:
-- Analyse the five requests
-- Weigh urgency, importance, reputational risk, and dependencies
-- Propose a prioritised action plan for today
-- Create a realistic, time-blocked plan for the working day
-- Provide a simple decision rule for handling new tasks that arrive later
-- Include 3 short reusable prompts the learner can use each Monday
-- End with one reflective question to help the learner improve how they use AI to prioritise over time
+  <p>Your prompt must instruct an AI assistant to:</p>
+  <ul>
+    <li><strong>Analyse</strong> the five requests</li>
+    <li><strong>Weigh urgency, importance, reputational risk, and dependencies</strong></li>
+    <li><strong>Propose a prioritised action plan for today</strong></li>
+    <li><strong>Create a realistic, time-blocked plan</strong> for the working day</li>
+    <li><strong>Provide a simple decision rule</strong> for handling new tasks that arrive later</li>
+    <li><strong>Include 3 short reusable prompts</strong> the learner can use each Monday</li>
+    <li><strong>End with one reflective question</strong> to help the learner improve how they use AI to prioritise over time</li>
+  </ul>
 
-OUTPUT CONSTRAINT
-The AI’s response must be one page maximum (max 400 words) and practical for real office use.`;
+  <h3>OUTPUT CONSTRAINT</h3>
+  <ul>
+    <li><strong>One page maximum (max 400 words)</strong></li>
+    <li><strong>Practical for real office use</strong></li>
+    <li><strong>Clear structure</strong> (bullet points encouraged)</li>
+  </ul>
 
-const TEMPLATE_TEXT =
-`Role:
-Task:
-Context (Audience):
-Format:`;
+  <p class="taskMiniNote"><em>Mobile tip:</em> Keep your prompt tight. Short labels + bullets = better AI output.</p>
+</div>
+`;
 
 /* ---------------- Model Prompt + Dummy AI Response ---------------- */
 const MODEL_ANSWER =
