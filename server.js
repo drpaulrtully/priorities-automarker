@@ -98,13 +98,6 @@ Task:
 Context:
 Format:`;
 
-// (keep your existing QUESTION_TEXT below exactly as-is)
-const QUESTION_TEXT = `
-<div class="taskText">
-  ...
-</div>
-`;
-
 const QUESTION_TEXT = `
 <div class="taskText">
   <h3>TASK</h3>
